@@ -1,18 +1,20 @@
+import { Noto_Serif_Display, Raleway } from '@next/font/google'
+import Header from '../components/Header'
 import './globals.css'
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+const notoSerifDisplay = Noto_Serif_Display({ variable: '--noto-serif-display' })
+const raleway = Raleway({ variable: '--raleway' })
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      {/*
-        <head /> will contain the components returned by the nearest parent
-        head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
-      */}
       <head />
-      <body>{children}</body>
+      <body className={`min-h-screen bg-zinc-900 text-zinc-100 ${notoSerifDisplay.variable} ${raleway.variable} px-6`}>
+        <div className="mx-auto max-w-5xl font-raleway text-base md:text-lg">
+          <Header />
+          <main className="py-6">{children}</main>
+        </div>
+      </body>
     </html>
   )
 }
