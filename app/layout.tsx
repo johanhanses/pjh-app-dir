@@ -3,7 +3,7 @@ import Header from '../components/Header'
 import './globals.css'
 
 const notoSerifDisplay = Noto_Serif_Display({ variable: '--noto-serif-display' })
-const raleway = Raleway({ variable: '--raleway' })
+const raleway = Raleway({ variable: '--raleway', subsets: ['latin'] })
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
