@@ -28,7 +28,9 @@ export default function Header() {
         {mobileMenuOpen ? <Cross /> : <Hamburger />}
       </button>
       <AnimatePresence>
-        {mobileMenuOpen && <MobileMenu mobileMenuRef={mobileMenuRef} cvLink={externalCVURL} />}
+        {mobileMenuOpen && (
+          <MobileMenu onClose={() => setMobileMenuOpen(false)} mobileMenuRef={mobileMenuRef} cvLink={externalCVURL} />
+        )}
       </AnimatePresence>
       <nav className="font-notoSerifDisplay pt-4 space-x-2 md:space-x-6 hidden md:block">
         <a

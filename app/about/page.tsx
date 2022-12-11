@@ -7,6 +7,7 @@ export default function page() {
         <li className="list-disc list-inside">Add colorMode, check compat with next-themes and nextjs appDir</li>
         <li className="list-disc list-inside line-through">Mobile menu</li>
         <li className="list-disc list-inside line-through">Animate mobile menu</li>
+        <li className="list-disc list-inside line-through">Close mobile menu on internal navigation</li>
       </ul>
     </div>
   )

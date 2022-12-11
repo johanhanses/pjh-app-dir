@@ -5,9 +5,10 @@ import { motion } from 'framer-motion'
 type MobileMenuProps = {
   mobileMenuRef: MutableRefObject<HTMLDivElement | null>
   cvLink: string
+  onClose: () => void
 }
 
-export default function MobileMenu({ mobileMenuRef, cvLink }: MobileMenuProps) {
+export default function MobileMenu({ mobileMenuRef, cvLink, onClose }: MobileMenuProps) {
   return (
     <motion.div
       initial={{ x: 200, opacity: 0 }}
@@ -21,7 +22,7 @@ export default function MobileMenu({ mobileMenuRef, cvLink }: MobileMenuProps) {
         <a href={cvLink} target="_blank" rel="noopener noreferrer" className="py-2">
           CV
         </a>
-        <Link href="/about" className="py-2">
+        <Link href="/about" onClick={onClose} className="py-2">
           About
         </Link>
       </nav>
