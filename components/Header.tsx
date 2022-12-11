@@ -1,7 +1,8 @@
 'use client'
 
+import { AnimatePresence } from 'framer-motion'
 import Link from 'next/link'
-import { DetailedHTMLProps, HTMLAttributes, LegacyRef, useRef, useState } from 'react'
+import { useRef, useState } from 'react'
 import useOnClickOutside from '../hooks/useOnClickOutside'
 import Cross from './Cross'
 import Hamburger from './Hamburger'
@@ -26,9 +27,9 @@ export default function Header() {
       <button className="pt-3 flex md:hidden" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
         {mobileMenuOpen ? <Cross /> : <Hamburger />}
       </button>
-
-      {mobileMenuOpen && <MobileMenu mobileMenuRef={mobileMenuRef} cvLink={externalCVURL} />}
-
+      <AnimatePresence>
+        {mobileMenuOpen && <MobileMenu mobileMenuRef={mobileMenuRef} cvLink={externalCVURL} />}
+      </AnimatePresence>
       <nav className="font-notoSerifDisplay pt-4 space-x-2 md:space-x-6 hidden md:block">
         <a
           href={externalCVURL}
