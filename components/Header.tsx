@@ -24,7 +24,11 @@ export default function Header() {
         <h1 className="text-3xl md:text-5xl mb-2 font-notoSerifDisplay">{title}</h1>
         <p className="text-sm md:text-base">{subtitle}</p>
       </Link>
-      <button className="pt-3 flex md:hidden" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
+      <button
+        aria-label="toggle menu"
+        className="pt-3 flex md:hidden"
+        onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+      >
         {mobileMenuOpen ? <Cross /> : <Hamburger />}
       </button>
       <AnimatePresence>
