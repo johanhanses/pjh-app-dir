@@ -26,7 +26,7 @@ export default function Header() {
       </Link>
       <button
         aria-label="toggle menu"
-        className="pt-3 flex md:hidden"
+        className="pt-2 flex md:hidden"
         onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
       >
         {mobileMenuOpen ? <Cross /> : <Hamburger />}
