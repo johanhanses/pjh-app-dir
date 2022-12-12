@@ -5,7 +5,7 @@ export default function page() {
       <ul className="space-y-2 md:space-y-1">
         <li className="list-disc list-inside line-through">Fix Lighthouse scores</li>
         <li className="list-disc list-inside">Add colorMode, check compat with next-themes and nextjs appDir</li>
-        <li className="list-disc list-inside">Add active classes to desktop nav links</li>
+        <li className="list-disc list-inside line-through">Add active classes to desktop nav links</li>
         <li className="list-disc list-inside">Next Auth?</li>
         <li className="list-disc list-inside">Sanity? for posts?</li>
         <li className="list-disc list-inside">Migrate CV.</li>
