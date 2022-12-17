@@ -10,7 +10,7 @@ import MobileMenu from './MobileMenu'
 import { useSelectedLayoutSegment } from 'next/navigation'
 
 const title = 'Johan Hanses'
-const subtitle = 'TypeScript | Tailwind | Cloud'
+const subtitle = 'TypeScript | UX | Cloud'
 const externalCVURL = 'https://cv.johanhanses.com'
 
 export default function Header() {
