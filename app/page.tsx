@@ -17,7 +17,7 @@ export default function Home() {
           </a>{' '}
           using TypeScript, Nextjs and React Native.
         </p>
-        <p>Interested in Web Performance, a11y, UX and Cloud technologies.</p>
+        <p>Obsessive self learner with an interest in Web performance, a11y, UX and Cloud technologies.</p>
       </div>
       <SocialList />
       <p className="text-xs text-yellow/60 mt-16">Built using Nextjs 13, TypeScript, Tailwind CSS and Vercel</p>
