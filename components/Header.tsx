@@ -22,7 +22,10 @@ export default function Header() {
 
   return (
     <header className="py-6 md:py-24 flex justify-between relative">
-      <Link href="/" className="hover:md:scale-105 transition-all duration-300 hover:md:text-yellow/60">
+      <Link
+        href="/"
+        className="hover:md:scale-105 transition-all duration-300 hover:md:text-yellow/60"
+      >
         <h1 className="text-3xl md:text-5xl mb-2 font-notoSerifDisplay">{title}</h1>
         <p className="text-sm md:text-base">{subtitle}</p>
       </Link>
@@ -35,7 +38,11 @@ export default function Header() {
       </button>
       <AnimatePresence>
         {mobileMenuOpen && (
-          <MobileMenu onClose={() => setMobileMenuOpen(false)} mobileMenuRef={mobileMenuRef} cvLink={externalCVURL} />
+          <MobileMenu
+            onClose={() => setMobileMenuOpen(false)}
+            mobileMenuRef={mobileMenuRef}
+            cvLink={externalCVURL}
+          />
         )}
       </AnimatePresence>
       <nav className="font-notoSerifDisplay pt-4 space-x-2 md:space-x-6 hidden md:block">
